@@ -10,6 +10,10 @@ require("keymaps")   -- custom keymaps
 -- Load plugins
 require("plugins")   -- packer plugin list
 
+-- Load additional plugin configs
+require("config.lsp")
+require("config.nvim-tree")
+
 -- Load format settings
 require("format")
 

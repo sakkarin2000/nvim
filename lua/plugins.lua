@@ -70,4 +70,24 @@ return require("packer").startup(function(use)
 	})
 
 	use({ "catppuccin/nvim", as = "catppuccin" })
+
+        -- LSP config
+    use "neovim/nvim-lspconfig"
+
+    -- Mason (LSP/DAP/linter/formatter installer)
+    use {
+        "williamboman/mason.nvim",
+        run = ":MasonUpdate"
+    }
+    use "williamboman/mason-lspconfig.nvim"
+
+    -- Autocompletion
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "saadparwaiz1/cmp_luasnip"
+
+    -- Snippets
+    use "L3MON4D3/LuaSnip"
 end)
