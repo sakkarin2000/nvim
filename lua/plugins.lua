@@ -77,7 +77,9 @@ return require("packer").startup(function(use)
     -- Mason (LSP/DAP/linter/formatter installer)
     use {
         "williamboman/mason.nvim",
-        run = ":MasonUpdate"
+        run = function()
+            vim.cmd("MasonUpdate")
+        end
     }
     use "williamboman/mason-lspconfig.nvim"
 
